@@ -24,3 +24,7 @@ out/
 go.work
 .idea
 .vscode
+
+# Setup
+setup/
+.env
