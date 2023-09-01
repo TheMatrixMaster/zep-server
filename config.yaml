@@ -14,7 +14,7 @@ llm:
   # assuming base model is deployed with deployment name matching model name
   #   llm_deployment: "gpt-3.5-turbo-customname"
   # embeddings deployment is required when Zep is configured to use OpenAI embeddings
-  #   embedding_deployment: "text-embedding-ada-002-customname"
+  embedding_deployment: "text-embedding-ada-002-customname"
   # Use only with an alternate OpenAI-compatible API endpoint
   openai_endpoint:
   openai_org_id:
@@ -26,10 +26,10 @@ extractors:
   documents:
     embeddings:
       enabled: true
-      dimensions: 384
-      service: "local"
-#      dimensions: 1536
-#      service: "openai"
+      # dimensions: 384
+      # service: "local"
+      dimensions: 1536
+      service: "openai"
   messages:
     summarizer:
       enabled: true
@@ -39,10 +39,10 @@ extractors:
       enabled: false
     embeddings:
       enabled: true
-      dimensions: 384
-      service: "local"
-#      dimensions: 1536
-#      service: "openai"
+      # dimensions: 384
+      # service: "local"
+      dimensions: 1536
+      service: "openai"
 store:
   type: "postgres"
   postgres:

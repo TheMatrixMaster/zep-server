@@ -15,7 +15,7 @@ Step 1: Create a new collection in which to store our documents for a given task
 
 collection_name = "fever"
 
-client.document.delete_collection(collection_name)
+# client.document.delete_collection(collection_name)
 
 try:
     collection = client.document.add_collection(
@@ -26,7 +26,7 @@ try:
     )
 except Exception as e:
     print(e)
-
+    exit()
 
 """
 Step 2: Chunk up documents into sections to be stored in the collection
@@ -36,7 +36,7 @@ Step 2: Chunk up documents into sections to be stored in the collection
 """
 
 DOC_DIR = "documents"
-FILE_NAME = "documents/raw_convo.txt"
+FILE_NAME = "/app/documents/raw_convo.txt"
 
 # Custom splitting for .txt file such that each entry in qa_data is a tuple of ([questions], answer)
 # TODO: Add support for csv, json, and yml files
